@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrimeiraVersao.Views.RecuperacaoSenha">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Recuperação da Senha" FontSize="50"  FontAttributes="Bold" HorizontalTextAlignment="Center">
+
+            </Label>
+
+
+            <Label Text="E-mail" FontSize="30" FontAttributes="Bold"/>
+            <Entry x:Name="TxtEmail">
+            </Entry>
+            <Label  Text="Nova Senha" FontSize="30" FontAttributes="Bold"/>
+            <Entry x:Name="TxtNovaSenha" IsPassword="true">
+            </Entry>
+            <Button x:Name="btnGerarSenha" Clicked="btnGerarSenha_Clicked"  Text="Gerar nova senha" BackgroundColor="LightBlue"></Button>
+            <Button x:Name="btnLogin" Clicked="btnLogin_Clicked"  Text="Fazer login" BackgroundColor="LightBlue"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrimeiraVersao.Views.Acompanhamento_Mes_Atual">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Acompanhamento" HorizontalTextAlignment="Center" FontSize="50" AbsoluteLayout.LayoutBounds="0,0"></Label>
+            <Button Text="Mês Atual" AbsoluteLayout.LayoutBounds="0,50" BackgroundColor="orange" />
+            <Button Text="Linha do Tempo" AbsoluteLayout.LayoutBounds="90,50"/>
+            <Button Text="Meses Anteriores" AbsoluteLayout.LayoutBounds="230,50"/>
+            <Label Text="Valor já gasto:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
+            <Label Text="R$1300,00" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

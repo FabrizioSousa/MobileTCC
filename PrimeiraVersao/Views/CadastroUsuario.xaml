@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrimeiraVersao.Views.CadastroUsuario">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="TextoInput" TargetType="Label">
+                <Setter Property="FontSize" Value="15" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Cadastro" FontSize="20"  FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+
+            <Label  Text="E-mail" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
+            <Entry x:Name="TxtEmail">
+            </Entry>
+            <Label  Text="Gênero" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
+            <Picker x:Name="cbGenero">
+                <Picker.Items>
+                    <x:String>Masculino</x:String>
+                    <x:String>Feminino</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label Text="Escolaridade" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
+            <Picker x:Name="cbEscolaridade">
+                <Picker.Items>
+                    <x:String>Ensino Fundamental Incompleto</x:String>
+                    <x:String>Ensino Fundamental Completo</x:String>
+                    <x:String>Ensino Médio Incompleto</x:String>
+                    <x:String>Ensino Médio Completo</x:String>
+                    <x:String>Ensino Superior Incompleto</x:String>
+                    <x:String>Ensino Superior Completo</x:String>
+                    <x:String>Mestrado/Doutorado Incompleto</x:String>
+                    <x:String>Mestrado/Doutorado Completo</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label Text="Está com nome sujo?" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
+            <Picker x:Name="cbNomeSujo">
+                <Picker.Items>
+                    <x:String>Sim</x:String>
+                    <x:String>Não</x:String>                    
+                </Picker.Items>
+            </Picker>
+            <Label Text="Já esteve com nome sujo?" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
+            <Picker x:Name="cbNomeSujoPassado">
+                <Picker.Items>
+                    <x:String>Sim</x:String>
+                    <x:String>Não</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label Text="Data de nascimento" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
+            <DatePicker x:Name="TxtDataNascimento" Format="dd/MM/yyyy" />
+            <Label Text="Senha" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
+            <Entry x:Name="TxtSenha" IsPassword="true">
+            </Entry>
+            <Button x:Name="btnCadastrarUsuario"  Clicked="btnCadastrarUsuario_Clicked"   Text="Cadastrar Usuário" BackgroundColor="LightBlue"></Button>
+            <Button x:Name="btnLogin" Clicked="btnLogin_Clicked"  Text="Fazer login" BackgroundColor="LightBlue"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

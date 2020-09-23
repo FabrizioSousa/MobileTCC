@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrimeiraVersao.Views.Acompanhamento_Meses_Anteriores">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Acompanhamento" HorizontalTextAlignment="Center" FontSize="50" AbsoluteLayout.LayoutBounds="0,0"></Label>
+            <Button Text="Mês Atual" AbsoluteLayout.LayoutBounds="0,50" />
+            <Button Text="Linha do Tempo" AbsoluteLayout.LayoutBounds="90,50"/>
+            <Button Text="Meses Anteriores" AbsoluteLayout.LayoutBounds="230,50" BackgroundColor="orange" />
+            <Label Text="Mês:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
+            <DatePicker MinimumDate="01/01/2020"
+            MaximumDate="09/30/2020"
+            Date="09/04/2020" />
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
