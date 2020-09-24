@@ -33,6 +33,7 @@ namespace PrimeiraVersao.Views
                 if (EmailUsuario.Count > 0 && SenhaUsuario.Count > 0)
                 {
                     await DisplayAlert("Sucesso", "Login com sucesso", "OK");
+                    
                     Application.Current.MainPage = new Carteira_Renda();
                 }
                 else

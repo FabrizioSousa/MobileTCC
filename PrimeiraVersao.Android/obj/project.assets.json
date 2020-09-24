@@ -2362,11 +2362,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fabri\\source\\repos\\PrimeiraVersao\\PrimeiraVersao.Android\\PrimeiraVersao.Android.csproj",
+      "projectUniqueName": "C:\\Users\\fabri\\source\\repos\\GitHub\\PrimeiraVersao\\PrimeiraVersao.Android\\PrimeiraVersao.Android.csproj",
       "projectName": "PrimeiraVersao.Android",
-      "projectPath": "C:\\Users\\fabri\\source\\repos\\PrimeiraVersao\\PrimeiraVersao.Android\\PrimeiraVersao.Android.csproj",
+      "projectPath": "C:\\Users\\fabri\\source\\repos\\GitHub\\PrimeiraVersao\\PrimeiraVersao.Android\\PrimeiraVersao.Android.csproj",
       "packagesPath": "C:\\Users\\fabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fabri\\source\\repos\\PrimeiraVersao\\PrimeiraVersao.Android\\obj\\",
+      "outputPath": "C:\\Users\\fabri\\source\\repos\\GitHub\\PrimeiraVersao\\PrimeiraVersao.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2387,8 +2387,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\fabri\\source\\repos\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj": {
-              "projectPath": "C:\\Users\\fabri\\source\\repos\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj"
+            "C:\\Users\\fabri\\source\\repos\\GitHub\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj": {
+              "projectPath": "C:\\Users\\fabri\\source\\repos\\GitHub\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj"
             }
           }
         }

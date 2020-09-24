@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fabri\\source\\repos\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj": {}
+    "C:\\Users\\fabri\\source\\repos\\GitHub\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fabri\\source\\repos\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj": {
+    "C:\\Users\\fabri\\source\\repos\\GitHub\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fabri\\source\\repos\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj",
+        "projectUniqueName": "C:\\Users\\fabri\\source\\repos\\GitHub\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj",
         "projectName": "PrimeiraVersao",
-        "projectPath": "C:\\Users\\fabri\\source\\repos\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj",
+        "projectPath": "C:\\Users\\fabri\\source\\repos\\GitHub\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj",
         "packagesPath": "C:\\Users\\fabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fabri\\source\\repos\\PrimeiraVersao\\PrimeiraVersao\\obj\\",
+        "outputPath": "C:\\Users\\fabri\\source\\repos\\GitHub\\PrimeiraVersao\\PrimeiraVersao\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

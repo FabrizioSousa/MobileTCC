@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "heOEfB2L/hoaUpF4jmH/uVrnFvoSr8XzSzv2a/F5shXPmgsy8/Miy/9H737YiiT+NlQ6D4XBHTzet0HJcz0kPA==",
+  "dgSpecHash": "VIJZL8vMl0MNcktkKJyBRE4EJ5IMA67apt1DuiucpeCaNS7h50AQVIYoPL0oaU5Q1vhEOSpKs0xe2mckwzLcng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fabri\\source\\repos\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj",
+  "projectFilePath": "C:\\Users\\fabri\\source\\repos\\GitHub\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fabri\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\fabri\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

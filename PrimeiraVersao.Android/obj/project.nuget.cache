@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ncl1WHnQ2n3SLRGo9SJRuNr1U6gHm3VdneX9B2xkZIIv1rrb4doc8p/+osGNM+rUjUmtabIM7HMQT8feuIlVYQ==",
+  "dgSpecHash": "WrwExwRZxqc6oNHbXNO65t4qzZZ4b+iGIpg0Ta7voF+j+DRoLVgvel6UwwQyOldOFYXgqYg39heNQvyKNgs6xg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fabri\\source\\repos\\PrimeiraVersao\\PrimeiraVersao.Android\\PrimeiraVersao.Android.csproj",
+  "projectFilePath": "C:\\Users\\fabri\\source\\repos\\GitHub\\PrimeiraVersao\\PrimeiraVersao.Android\\PrimeiraVersao.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fabri\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
     "C:\\Users\\fabri\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",

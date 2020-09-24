@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +32,11 @@ namespace PrimeiraVersao.Views
         private void btnLogout_Clicked(object sender, EventArgs e)
         {
             Application.Current.MainPage = new Login();
+        }
+
+        private void btnAdicionar_Clicked(object sender, EventArgs e)
+        {
+           
         }
     }
 }
