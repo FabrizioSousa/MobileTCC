@@ -32,10 +32,5 @@ namespace PrimeiraVersao.Views
         {
             Application.Current.MainPage = new Login();
         }
-
-        private void btnAdicionar_Clicked(object sender, EventArgs e)
-        {
-
-        }
     }
 }

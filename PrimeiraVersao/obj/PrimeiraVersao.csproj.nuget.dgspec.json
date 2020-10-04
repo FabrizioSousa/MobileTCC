@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fabri\\source\\repos\\GitHub\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj": {}
+    "C:\\Users\\fabri\\source\\repos\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fabri\\source\\repos\\GitHub\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj": {
+    "C:\\Users\\fabri\\source\\repos\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fabri\\source\\repos\\GitHub\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj",
+        "projectUniqueName": "C:\\Users\\fabri\\source\\repos\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj",
         "projectName": "PrimeiraVersao",
-        "projectPath": "C:\\Users\\fabri\\source\\repos\\GitHub\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj",
+        "projectPath": "C:\\Users\\fabri\\source\\repos\\PrimeiraVersao\\PrimeiraVersao\\PrimeiraVersao.csproj",
         "packagesPath": "C:\\Users\\fabri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fabri\\source\\repos\\GitHub\\PrimeiraVersao\\PrimeiraVersao\\obj\\",
+        "outputPath": "C:\\Users\\fabri\\source\\repos\\PrimeiraVersao\\PrimeiraVersao\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -42,11 +42,51 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.6.0, )"
+            },
+            "Azure.Storage.Queues": {
+              "target": "Package",
+              "version": "[12.4.2, )"
+            },
+            "Microsoft.Azure.Cosmos.Table": {
+              "target": "Package",
+              "version": "[1.0.8, )"
+            },
+            "Microsoft.Azure.Storage.Blob": {
+              "target": "Package",
+              "version": "[11.2.2, )"
+            },
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
+            "Microsoft.ML": {
+              "target": "Package",
+              "version": "[1.5.2, )"
+            },
+            "Microsoft.ML.CpuMath": {
+              "target": "Package",
+              "version": "[1.5.2, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Numerics.Vectors": {
+              "target": "Package",
+              "version": "[4.5.0, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",
@@ -54,7 +94,7 @@
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.6.0.1141, )"
+              "version": "[4.8.0.1451, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",
@@ -71,7 +111,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

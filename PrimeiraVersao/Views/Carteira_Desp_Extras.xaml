@@ -33,19 +33,18 @@
             </Grid>
            
             <Label Text="Categoria:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
-            <Picker x:Name="cbCategoria" >
+            <Picker >
                 <Picker.Items>
-                    <x:String>Lazer</x:String>
-                    <x:String>Educação</x:String>
-                    <x:String>Comida</x:String>
-                    <x:String>Roupa</x:String>
+                    <x:String>Option 1</x:String>
+                    <x:String>Option 2</x:String>
+                    <x:String>Option 3</x:String>
                 </Picker.Items>
             </Picker>
             <Label Text="Descrição:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
-            <Entry x:Name="txtDescrição"></Entry>
+            <Entry></Entry>
             <Label Text="Valor:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
-            <Entry x:Name="txtValor" Placeholder="R$"></Entry>
-            <Button Text="+" x:Name="btnAdicionar" Clicked="btnAdicionar_Clicked"></Button>
+            <Entry Placeholder="R$"></Entry>
+            <Button Text="+"></Button>
 
 
 
