@@ -4,11 +4,32 @@
              x:Class="PrimeiraVersao.Views.Acompanhamento_Linha_Tempo">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Acompanhamento" HorizontalTextAlignment="Center" FontSize="30" AbsoluteLayout.LayoutBounds="0,0"></Label>
-            <Button Text="Mês Atual" AbsoluteLayout.LayoutBounds="0,50"  />
-            <Button Text="Linha do Tempo" AbsoluteLayout.LayoutBounds="90,50" BackgroundColor="orange"/>
-            <Button Text="Meses Anteriores" AbsoluteLayout.LayoutBounds="230,50"/>
-        
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250" />
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Text="Acompanhamento" FontSize="30" AbsoluteLayout.LayoutBounds="0,0"></Label>
+                <Button Grid.Row="0" Grid.Column="1" x:Name="btnLogout" Clicked="btnLogout_Clicked" HorizontalOptions="Center"  Text="Logout" BackgroundColor="Gray" FontSize="12"/>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" x:Name="btnMesAtual"   Clicked="btnMesAtual_Clicked" Text="Mês Atual"  AbsoluteLayout.LayoutBounds="0,50" />
+                <Button Grid.Row="0" Grid.Column="1" x:Name="btnLinhaTempo"  Text="Linha do Tempo" AbsoluteLayout.LayoutBounds="90,50"  BackgroundColor="orange"/>
+                <Button Grid.Row="0" Grid.Column="2" x:Name="btnMesesAnteriores" Clicked="btnMesesAnteriores_Clicked" Text="Meses Anteriores" AbsoluteLayout.LayoutBounds="230,50"/>
+            </Grid>
+            
+           
 
 
 

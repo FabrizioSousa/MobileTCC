@@ -1,20 +1,13 @@
 ﻿using PrimeiraVersao.Models;
-using SQLite;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.ML;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using static Microsoft.ML.DataOperationsCatalog;
-using Microsoft.ML.Data;
+using Newtonsoft.Json.Linq;
+using RestSharp;
+using Xamarin.Essentials;
+using System.Threading;
 
-
-using Azure.Storage.Blobs;
-using Microsoft.Azure.Storage;
 
 namespace PrimeiraVersao.Views
 {
@@ -22,53 +15,101 @@ namespace PrimeiraVersao.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
-        private string _modelPath;
-        private MLContext _context;
+
 
         public Login()
         {
             InitializeComponent();
         }
+        public class StringTable
+        {
+            public string[] ColumnNames { get; set; }
+            public string[,] Values { get; set; }
+        }
         async void btnLogin_Clicked(object sender, EventArgs args)
         {
-            _context = new MLContext();
-            _modelPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "model.zip");
-            ITransformer model;
-            DataViewSchema schema;
-            if (!System.IO.File.Exists(_modelPath))
-            {
-                CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=tccinadimplanecia;AccountKey=kNEa4mJH9VYGlHa/PXcpl+rDBBLCwx/i3DI2AA/WpYFEP/sMvGMCBbyRXqwd2OomBTPZiZnE7u/CrKJ96EwyBQ==;EndpointSuffix=core.windows.net");
-                Microsoft.Azure.Storage.Blob.CloudBlobClient client = Microsoft.Azure.Storage.Blob.BlobAccountExtensions.CreateCloudBlobClient(storageAccount);
-                var container = client.GetContainerReference("models");
+            //ModelInput usuario = new ModelInput()
+            //{
 
-                var blob = container.GetBlockBlobReference("model.zip");
-
-                await blob.DownloadToFileAsync(_modelPath, System.IO.FileMode.CreateNew);
-
-            }
-            using (var stream = System.IO.File.OpenRead(_modelPath))
-            {
-                model = _context.Model.Load(stream, out schema);
-            }
-            ModelInput sampleStatement = new ModelInput
-            {
-                Idade = 20,
-                Sexo = 1,
-                Escolaridade = 2,
-                Fl_InadimplentePassado = 1,
-                Renda = 5000,
-                Desp_Fixas = 1000,
-                Desp_Variaveis = 3000,
-                Contas_Atrasadas = 1
-            };
-
-            var predictionEngine = _context.Model.CreatePredictionEngine<ModelInput, ModelOutput>(model);
-
-            var prediction = predictionEngine.Predict(sampleStatement);
-
-            await DisplayAlert("Erro", prediction.Prediction.ToString(), "OK");
+            //    Idade = "Ate 35 anos",
+            //    Sexo = "Masculino",
+            //    Escolaridade = "Ensino Fundamental Incompleto",
+            //    Fl_Inadimplente = 1,
+            //    Fl_InadimplentePassado = "Nao",
+            //    Renda = "Ate 4000",
+            //    Desp_Fixas = "Ate 3000",
+            //    Desp_Variaveis = "Ate 2000",
+            //    Contas_Atrasadas = "Sim",
+            //};
 
 
+            //string parametro = "{\r\n  \"Inputs\": {\r\n    \"input1\": {\r\n      \"ColumnNames\": [\r\n        \"Idade\",\r\n        \"Sexo\",\r\n        \"Escolaridade\",\r\n        \"Fl_Inadimplente\",\r\n        \"Fl_InadimplentePassado\",\r\n        \"Renda\",\r\n        \"Desp_Fixas\",\r\n        \"Desp_Variaveis\",\r\n        \"Contas_Atrasadas\"\r\n      ],\r\n      \"Values\": [\r\n        [\r\n          \""
+            //    + usuario.Idade /*Idade*/
+            //    + "\", \""
+            //    + usuario.Sexo /*Sexo*/
+            //    + "\", \""
+            //    + usuario.Escolaridade /*Escolaridade*/
+            //    + "\", \""
+            //    + usuario.Fl_Inadimplente /*Fl_Inadimplente*/
+            //    + "\", \""
+            //    + usuario.Fl_InadimplentePassado /*Fl_InadimplentePassado*/
+            //    + "\", \""
+            //    + usuario.Renda /*Renda*/
+            //    + "\", \""
+            //    + usuario.Desp_Fixas /*Desp_Fixas*/
+            //    + "\", \""
+            //    + usuario.Desp_Variaveis /*Desp_Variaveis*/
+            //    + "\", \""
+            //    + usuario.Contas_Atrasadas /*Contas_Atrasadas*/
+            //    + "\"\r\n        ]\r\n      ]\r\n    }\r\n  },\r\n  \"GlobalParameters\": {}\r\n}";
+            ////await DisplayAlert("Resultado", parametro, "OK");
+            //var client = new RestClient("https://ussouthcentral.services.azureml.net/workspaces/a322bbf7f8c74346ae2532c8be6d768e/services/ef5c2f0e5ca94fb9aab0c431a754c6e6/execute?api-version=2.0&details=true");
+            //client.Timeout = -1;
+            //var request = new RestRequest(Method.POST);
+            //request.AddHeader("Content-Type", "application/json");
+            //request.AddHeader("Authorization", "Bearer svKy5GLHapRXUDrCTkBXc4P5Y67Qu4tci5Feaiqq2wVbpGvWAMuYf0bjOZuYEp0ETmf/XaO33ZK/cfxEG64ggQ==");
+            //request.AddParameter(
+            ////"application/json", "{\r\n  \"Inputs\": {\r\n    \"input1\": {\r\n      \"ColumnNames\": [\r\n        \"ID\",\r\n        \"Idade\",\r\n        \"Sexo\",\r\n        \"Escolaridade\",\r\n        \"Fl_Inadimplente\",\r\n        \"Fl_InadimplentePassado\",\r\n        \"Renda\",\r\n        \"Desp_Fixas\",\r\n        \"Desp_Variaveis\",\r\n        \"Contas_Atrasadas\"\r\n      ],\r\n      \"Values\": [\r\n        [\r\n          \"0\", \"20\", \"1\", \"2\", \"0\", \"1\", \"5000\", \"1000\", \"3000\", \"1\"\r\n        ]\r\n      ]\r\n    }\r\n  },\r\n  \"GlobalParameters\": {}\r\n}", ParameterType.RequestBody);
+            //"application/json", parametro, ParameterType.RequestBody);
+
+            //IRestResponse response = client.Execute(request);
+
+
+            ////         HttpResponseMessage response = await client
+            ////.PostAsync("", new StringContent(JsonConvert.SerializeObject(inputData), Encoding.UTF8, "application/json"));
+
+
+
+            //var results = JObject.Parse(response.Content);
+            //string resultadoAPI = results["Results"]["output1"]["value"]["Values"].ToString();
+            //char predicaoChar = resultadoAPI.Replace("[", "").Replace("]", "").Replace(@"\", "").Trim()[1];
+            //bool predicao;
+            //if (predicaoChar == '1')
+            //    predicao = true;
+            //else
+            //    predicao = false;
+
+            //string ProbabilidadeString = resultadoAPI.Replace("[", "").Replace("]", "").Replace(@"\", "").Trim().Replace('.',',');
+            //float Probabilidade = float.Parse(ProbabilidadeString.Remove(ProbabilidadeString.Length - 2).Remove(0, 11));
+
+
+            //if (predicao)
+            //{
+            //    var duration = TimeSpan.FromMilliseconds(500);
+            //    for (int i = 0; i < 3; i++)
+            //    {
+            //        Vibration.Vibrate(duration);
+            //        Thread.Sleep(500);
+            //    }
+            //}
+
+
+
+            //await DisplayAlert("Resultado", "Predição: " + predicao.ToString()
+            //                               + "\nProbabilidade: " +
+            //                                string.Format("{0:P2}.", Probabilidade), "OK");
+
+            Application.Current.MainPage = new Carteira_Renda();
 
         }
 
@@ -86,44 +127,6 @@ namespace PrimeiraVersao.Views
             Application.Current.MainPage = new CadastroUsuario();
         }
 
-        class ModelInput
-        {
-            [LoadColumn(0)]
-            public int ID;
 
-            [LoadColumn(1)]
-            public int Idade;
-            [LoadColumn(2)]
-            public int Sexo;
-            [LoadColumn(3)]
-            public int Escolaridade;
-            [LoadColumn(4), ColumnName("Label")]
-            public bool Fl_Inadimplente;
-            [LoadColumn(5)]
-            public int Fl_InadimplentePassado;
-
-            [LoadColumn(6)]
-            public int Renda;
-            [LoadColumn(7)]
-            public int Desp_Fixas;
-            [LoadColumn(8)]
-            public int Desp_Variaveis;
-            [LoadColumn(9)]
-            public int Contas_Atrasadas;
-
-
-        }
-
-        class ModelOutput
-        {
-            [ColumnName("PredictedLabel")]
-            public bool Prediction { get; set; }
-
-
-            public float Score { get; set; }
-
-            public float Probability { get; set; }
-
-        }
     }
 }

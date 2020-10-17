@@ -2,23 +2,24 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrimeiraVersao.Views.Login"
-             xmlns:vm="clr-namespace:PrimeiraVersao.ViewModels"
+            
              Title="{Binding Title}">
 
     <ContentPage.Content>
-
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Label Text="CresceDin" FontSize="50" FontAttributes="Bold" HorizontalTextAlignment="Center">
-            </Label>
-            <Label Text="E-mail" FontSize="30" FontAttributes="Bold"/>
-            <Entry x:Name="TxtEmail">
+        
+        <StackLayout Padding="0,50,0,50" BackgroundColor="Black"  >
+            <Image Source="xamarin_logo.png" ></Image>
+            <Label TextColor="Orange" Text=".crescedin"  FontSize="50" FontAttributes="Bold" HorizontalTextAlignment="Center">
+            </Label>            
+            <Label TextColor="Orange" Text="E-mail" FontSize="30" FontAttributes="Bold"/>
+            <Entry BackgroundColor="White" x:Name="TxtEmail">
             </Entry>
-            <Label Text="Senha" FontSize="30" FontAttributes="Bold"/>
-            <Entry x:Name="TxtSenha" IsPassword="true">
+            <Label TextColor="Orange" Text="Senha" FontSize="30" FontAttributes="Bold"/>
+            <Entry BackgroundColor="White" x:Name="TxtSenha" IsPassword="true">
             </Entry>
-            <Button x:Name="btnLogin" VerticalOptions="Center" Text="Login" Clicked="btnLogin_Clicked"/>
-            <Button x:Name="bnEsqueciSenha" Clicked="bnEsqueciSenha_Clicked" Text="Esqueci minha senha" BackgroundColor="LightBlue" />
-            <Button x:Name="bnCadastro" Clicked="bnCadastro_Clicked" Text="Cadastrar usuário" BackgroundColor="LightBlue" />
+            <Button BackgroundColor="Orange" x:Name="btnLogin" VerticalOptions="Center" Text="Login" Clicked="btnLogin_Clicked"/>
+            <Button BackgroundColor="Orange" x:Name="bnEsqueciSenha" Clicked="bnEsqueciSenha_Clicked" Text="Esqueci minha senha"  />
+            <Button BackgroundColor="Orange" x:Name="bnCadastro" Clicked="bnCadastro_Clicked" Text="Cadastrar usuário"  />
 
         </StackLayout>
     </ContentPage.Content>

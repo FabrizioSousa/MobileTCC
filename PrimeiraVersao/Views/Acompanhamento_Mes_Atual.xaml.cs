@@ -16,5 +16,20 @@ namespace PrimeiraVersao.Views
         {
             InitializeComponent();
         }
+
+        private void btnMesAtual_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new Acompanhamento_Mes_Atual();
+        }
+
+        private void btnMesesAnteriores_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new Acompanhamento_Meses_Anteriores();
+        }
+
+        private void btnLogout_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new Login();
+        }
     }
 }

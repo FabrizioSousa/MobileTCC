@@ -10,21 +10,23 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Cadastro" FontSize="20"  FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
+        <ScrollView>
+            <StackLayout Padding="0,50,0,50" BackgroundColor="Black">
+                <Image Source="xamarin_logo.png" ></Image>
+                <Label Text="Cadastro" TextColor="Orange" FontSize="50"  FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
 
-            <Label  Text="E-mail" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
-            <Entry x:Name="TxtEmail">
+                <Label TextColor="Orange" Text="E-mail" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
+                <Entry BackgroundColor="White" x:Name="TxtEmail">
             </Entry>
-            <Label  Text="Gênero" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
-            <Picker x:Name="cbGenero">
+                <Label TextColor="Orange" Text="Gênero" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
+                <Picker BackgroundColor="White" x:Name="cbGenero">
                 <Picker.Items>
                     <x:String>Masculino</x:String>
                     <x:String>Feminino</x:String>
                 </Picker.Items>
             </Picker>
-            <Label Text="Escolaridade" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
-            <Picker x:Name="cbEscolaridade">
+                <Label TextColor="Orange" Text="Escolaridade" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
+                <Picker BackgroundColor="White" x:Name="cbEscolaridade">
                 <Picker.Items>
                     <x:String>Ensino Fundamental Incompleto</x:String>
                     <x:String>Ensino Fundamental Completo</x:String>
@@ -36,27 +38,28 @@
                     <x:String>Mestrado/Doutorado Completo</x:String>
                 </Picker.Items>
             </Picker>
-            <Label Text="Está com nome sujo?" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
-            <Picker x:Name="cbNomeSujo">
+                <Label TextColor="Orange" Text="Está com nome sujo?" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
+                <Picker BackgroundColor="White" x:Name="cbNomeSujo">
                 <Picker.Items>
                     <x:String>Sim</x:String>
                     <x:String>Não</x:String>                    
                 </Picker.Items>
             </Picker>
-            <Label Text="Já esteve com nome sujo?" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
-            <Picker x:Name="cbNomeSujoPassado">
+                <Label TextColor="Orange" Text="Já esteve com nome sujo?" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
+                <Picker BackgroundColor="White" x:Name="cbNomeSujoPassado">
                 <Picker.Items>
                     <x:String>Sim</x:String>
                     <x:String>Não</x:String>
                 </Picker.Items>
             </Picker>
-            <Label Text="Data de nascimento" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
-            <DatePicker x:Name="TxtDataNascimento" Format="dd/MM/yyyy" />
-            <Label Text="Senha" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
-            <Entry x:Name="TxtSenha" IsPassword="true">
+                <Label TextColor="Orange" Text="Data de nascimento" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
+                <DatePicker BackgroundColor="White" x:Name="TxtDataNascimento" Format="dd/MM/yyyy" />
+                <Label TextColor="Orange" Text="Senha" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
+                <Entry BackgroundColor="White" x:Name="TxtSenha" IsPassword="true">
             </Entry>
-            <Button x:Name="btnCadastrarUsuario"  Clicked="btnCadastrarUsuario_Clicked"   Text="Cadastrar Usuário" BackgroundColor="LightBlue"></Button>
-            <Button x:Name="btnLogin" Clicked="btnLogin_Clicked"  Text="Fazer login" BackgroundColor="LightBlue"></Button>
+                <Button BackgroundColor="Orange" x:Name="btnCadastrarUsuario"  Clicked="btnCadastrarUsuario_Clicked"   Text="Cadastrar Usuário"></Button>
+                <Button BackgroundColor="Orange" x:Name="btnLogin" Clicked="btnLogin_Clicked"  Text="Fazer login" ></Button>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[12.4.2, )"
             },
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
             "Microsoft.Azure.Cosmos.Table": {
               "target": "Package",
               "version": "[1.0.8, )"
@@ -57,10 +61,6 @@
             "Microsoft.Azure.Storage.Blob": {
               "target": "Package",
               "version": "[11.2.2, )"
-            },
-            "Microsoft.CSharp": {
-              "target": "Package",
-              "version": "[4.7.0, )"
             },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
@@ -80,13 +80,9 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
-            "System.Net.Http": {
+            "RestSharp": {
               "target": "Package",
-              "version": "[4.3.4, )"
-            },
-            "System.Numerics.Vectors": {
-              "target": "Package",
-              "version": "[4.5.0, )"
+              "version": "[106.11.7, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

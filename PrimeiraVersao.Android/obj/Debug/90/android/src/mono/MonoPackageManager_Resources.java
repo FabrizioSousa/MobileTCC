@@ -3,7 +3,17 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "PrimeiraVersao.Android.dll" comes first in this list. */
 		"PrimeiraVersao.Android.dll",
+		"Azure.Core.dll",
+		"Azure.Storage.Blobs.dll",
+		"Azure.Storage.Common.dll",
+		"Azure.Storage.Queues.dll",
 		"FormsViewGroup.dll",
+		"Microsoft.Azure.Cosmos.Table.dll",
+		"Microsoft.Azure.DocumentDB.Core.dll",
+		"Microsoft.Azure.KeyVault.Core.dll",
+		"Microsoft.Azure.Storage.Blob.dll",
+		"Microsoft.Azure.Storage.Common.dll",
+		"Microsoft.Bcl.AsyncInterfaces.dll",
 		"Microsoft.Extensions.Configuration.Abstractions.dll",
 		"Microsoft.Extensions.Primitives.dll",
 		"Microsoft.ML.Core.dll",
@@ -14,9 +24,13 @@ public class MonoPackageManager_Resources {
 		"Microsoft.ML.PCA.dll",
 		"Microsoft.ML.StandardTrainers.dll",
 		"Microsoft.ML.Transforms.dll",
-		"Microsoft.WindowsAzure.Storage.dll",
+		"Microsoft.OData.Core.dll",
+		"Microsoft.OData.Edm.dll",
+		"Microsoft.Spatial.dll",
+		"Newtonsoft.Json.Bson.dll",
 		"Newtonsoft.Json.dll",
 		"PrimeiraVersao.dll",
+		"RestSharp.dll",
 		"SQLite-net.dll",
 		"SQLitePCLRaw.batteries_v2.dll",
 		"SQLitePCLRaw.core.dll",
@@ -24,6 +38,10 @@ public class MonoPackageManager_Resources {
 		"SQLitePCLRaw.provider.e_sqlite3.dll",
 		"System.CodeDom.dll",
 		"System.Collections.Immutable.dll",
+		"System.Diagnostics.DiagnosticSource.dll",
+		"System.Net.Http.Formatting.dll",
+		"System.Text.Encodings.Web.dll",
+		"System.Text.Json.dll",
 		"System.Threading.Channels.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
@@ -70,5 +88,5 @@ public class MonoPackageManager_Resources {
 	};
 	public static String[] Dependencies = new String[]{
 	};
-	public static String ApiPackageName = "Mono.Android.Platform.ApiLevel_28";
+	public static String ApiPackageName = null;
 }

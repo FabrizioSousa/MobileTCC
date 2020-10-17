@@ -3,8 +3,8 @@
 	.section	.rodata.env.str.1,"aMS",@progbits,1
 	.type	.L.env.str.1, @object
 .L.env.str.1:
-	.asciz	"com.companyname.primeiraversao"
-	.size	.L.env.str.1, 31
+	.asciz	"com.companyname.CresceDin"
+	.size	.L.env.str.1, 26
 	.section	.data.application_config,"aw",@progbits
 	.type	application_config, @object
 	.p2align	3
@@ -48,23 +48,23 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.3,"aMS",@progbits,1
 	.type	.L.env.str.3, @object
 .L.env.str.3:
-	.asciz	"MONO_DEBUG"
-	.size	.L.env.str.3, 11
+	.asciz	"MONO_GC_PARAMS"
+	.size	.L.env.str.3, 15
 	.section	.rodata.env.str.4,"aMS",@progbits,1
 	.type	.L.env.str.4, @object
 .L.env.str.4:
-	.asciz	"gen-compact-seq-points"
-	.size	.L.env.str.4, 23
+	.asciz	"major=marksweep-conc"
+	.size	.L.env.str.4, 21
 	.section	.rodata.env.str.5,"aMS",@progbits,1
 	.type	.L.env.str.5, @object
 .L.env.str.5:
-	.asciz	"MONO_GC_PARAMS"
+	.asciz	"MONO_LOG_LEVEL"
 	.size	.L.env.str.5, 15
 	.section	.rodata.env.str.6,"aMS",@progbits,1
 	.type	.L.env.str.6, @object
 .L.env.str.6:
-	.asciz	"major=marksweep-conc"
-	.size	.L.env.str.6, 21
+	.asciz	"info"
+	.size	.L.env.str.6, 5
 	.section	.rodata.env.str.7,"aMS",@progbits,1
 	.type	.L.env.str.7, @object
 .L.env.str.7:
@@ -73,7 +73,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",@progbits,1
 	.type	.L.env.str.8, @object
 .L.env.str.8:
-	.asciz	"182ef253-5988-4320-b3f8-a4156af5f057"
+	.asciz	"da2e31bb-2747-43bf-aea9-33f999b8f9a4"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",@progbits,1
 	.type	.L.env.str.9, @object

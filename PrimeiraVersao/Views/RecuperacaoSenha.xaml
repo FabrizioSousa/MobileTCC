@@ -3,20 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrimeiraVersao.Views.RecuperacaoSenha">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Recuperação da Senha" FontSize="50"  FontAttributes="Bold" HorizontalTextAlignment="Center">
-
+        <StackLayout Padding="0,50,0,50" BackgroundColor="Black">
+            <Image Source="xamarin_logo.png" ></Image>
+            <Label TextColor="Orange" Text="Recuperação da Senha" FontSize="50"  FontAttributes="Bold" HorizontalTextAlignment="Center">
             </Label>
-
-
-            <Label Text="E-mail" FontSize="30" FontAttributes="Bold"/>
-            <Entry x:Name="TxtEmail">
+            <Label TextColor="Orange" Text="E-mail" FontSize="30" FontAttributes="Bold"/>
+            <Entry  BackgroundColor="White" x:Name="TxtEmail">
             </Entry>
-            <Label  Text="Nova Senha" FontSize="30" FontAttributes="Bold"/>
-            <Entry x:Name="TxtNovaSenha" IsPassword="true">
+            <Label  TextColor="Orange" Text="Nova Senha" FontSize="30" FontAttributes="Bold"/>
+            <Entry  BackgroundColor="White" x:Name="TxtNovaSenha" IsPassword="true">
             </Entry>
-            <Button x:Name="btnGerarSenha" Clicked="btnGerarSenha_Clicked"  Text="Gerar nova senha" BackgroundColor="LightBlue"></Button>
-            <Button x:Name="btnLogin" Clicked="btnLogin_Clicked"  Text="Fazer login" BackgroundColor="LightBlue"></Button>
+            <Button BackgroundColor="Orange" x:Name="btnGerarSenha" Clicked="btnGerarSenha_Clicked"  Text="Gerar nova senha" ></Button>
+            <Button BackgroundColor="Orange"  x:Name="btnLogin" Clicked="btnLogin_Clicked"  Text="Fazer login" ></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
