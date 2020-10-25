@@ -7,7 +7,9 @@ using Newtonsoft.Json.Linq;
 using RestSharp;
 using Xamarin.Essentials;
 using System.Threading;
-
+using System.IO;
+using SQLite;
+using System.Collections.Generic;
 
 namespace PrimeiraVersao.Views
 {
@@ -109,7 +111,28 @@ namespace PrimeiraVersao.Views
             //                               + "\nProbabilidade: " +
             //                                string.Format("{0:P2}.", Probabilidade), "OK");
 
-            Application.Current.MainPage = new Carteira_Renda();
+            try
+            {
+                var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+                path = Path.Combine(path, "Usuario");
+                var db = new SQLiteConnection(path);
+                string email = TxtEmail.Text.ToString();
+                string senha = TxtSenha.Text.ToString();
+                List<Usuario> EmailUsuario = db.Table<Usuario>().Where(x => x.Email == email).ToList();
+                List<Usuario> SenhaUsuario = db.Table<Usuario>().Where(x => x.Senha == senha).ToList();
+                if (EmailUsuario.Count > 0 && SenhaUsuario.Count > 0)
+                {
+                    await DisplayAlert("Sucesso", "Login com sucesso", "OK");
+
+                    Application.Current.MainPage = new Menu();
+                }
+                else
+                    await DisplayAlert("Erro", "E-mail não existe", "OK");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Erro", "E-mail não existe", "OK");
+            }
 
         }
 

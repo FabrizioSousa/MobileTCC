@@ -3,18 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrimeiraVersao.Views.Carteira_Desp_Fixas">
     <ContentPage.Content>
-        <StackLayout>
-
+        <ScrollView>
+        <StackLayout Padding="0,50,0,50" BackgroundColor="Black">
+            <Image Source="xamarin_logo.png" ></Image>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="70"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="200"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Label Grid.Row="0" Grid.Column="1" Text="Carteira" FontSize="50" AbsoluteLayout.LayoutBounds="0,0"></Label>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="180"/>
+                        <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0" Grid.Column="0" x:Name="btnMenu" Clicked="btnMenu_Clicked"  HorizontalOptions="Center"  Text="Menu" BackgroundColor="Gray" FontSize="12"/>
+                    <Label TextColor="Orange" Grid.Row="0" Grid.Column="1" Text="Carteira" FontSize="50" AbsoluteLayout.LayoutBounds="0,0"></Label>
                 <Button Grid.Row="0" Grid.Column="2" x:Name="btnLogout" Clicked="btnLogout_Clicked" HorizontalOptions="Center"  Text="Logout" BackgroundColor="Gray" FontSize="12"/>
             </Grid>
             <Grid>
@@ -29,22 +31,24 @@
                 <Button Grid.Row="0" Grid.Column="0" x:Name="btnRenda" Clicked="btnRenda_Clicked" Text="Renda"  AbsoluteLayout.LayoutBounds="0,50"  />
                 <Button Grid.Row="0" Grid.Column="1" x:Name="btnDespFixas" BackgroundColor="orange" Text="Despesas Fixas" AbsoluteLayout.LayoutBounds="90,50"/>
                 <Button Grid.Row="0" Grid.Column="2" x:Name="btnDespExtras" Clicked="btnDespExtras_Clicked" Text="Despesas Extras" AbsoluteLayout.LayoutBounds="230,50"/>
-            </Grid>           
-            <Label Text="Categoria:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
-            <Picker >
+            </Grid>
+            <Label TextColor="Orange" Text="Categoria:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
+                <Picker BackgroundColor="White">
                 <Picker.Items>
-                    <x:String>Option 1</x:String>
-                    <x:String>Option 2</x:String>
-                    <x:String>Option 3</x:String>
+                    <x:String>Conta de luz</x:String>
+                    <x:String>Conta de telefone</x:String>
+                    <x:String>Conta da Internet</x:String>
+                    <x:String>Conta da TV a cabo</x:String>
                 </Picker.Items>
             </Picker>
-            <Label Text="Descrição:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
-            <Entry></Entry>
-            <Label Text="Valor:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
-            <Entry Placeholder="R$"></Entry>
+            <Label TextColor="Orange" Text="Descrição:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
+                <Entry BackgroundColor="White" ></Entry>
+            <Label TextColor="Orange" Text="Valor:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
+                <Entry BackgroundColor="White" Placeholder="R$"></Entry>
             <Button Text="+" ></Button>
 
 
         </StackLayout>
+            </ScrollView>
     </ContentPage.Content>
 </ContentPage>

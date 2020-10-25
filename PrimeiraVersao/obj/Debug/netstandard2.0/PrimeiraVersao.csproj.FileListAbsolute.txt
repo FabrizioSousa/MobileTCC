@@ -25,3 +25,4 @@ C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\PrimeiraVersao.csprojAssemblyReference.cache
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\PrimeiraVersao.csproj.CoreCompileInputs.cache
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\Views\Menu.xaml.g.cs

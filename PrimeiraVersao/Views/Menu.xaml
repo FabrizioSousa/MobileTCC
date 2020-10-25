@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrimeiraVersao.Views.Menu">
+    <ContentPage.Content>
+        <StackLayout Padding="0,50,0,50" BackgroundColor="Black">
+            <Image Source="xamarin_logo.png" ></Image>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="115"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label TextColor="Orange" Grid.Row="0" Grid.Column="1" Text="Menu" FontSize="50" AbsoluteLayout.LayoutBounds="0,0"></Label>
+                <Button Grid.Row="0" Grid.Column="2" x:Name="btnLogout"  HorizontalOptions="Center" Clicked="btnLogout_Clicked" Text="Logout" BackgroundColor="Gray" FontSize="12"/>
+            </Grid>
+
+            <Grid Padding="0,80">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>                    
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="0" Grid.Column="0" x:Name="btnAcompanhamento" Clicked="btnAcompanhamento_Clicked"  Text="Acompanhamento"  AbsoluteLayout.LayoutBounds="0,50"  />                
+                <Button Grid.Row="0" Grid.Column="1" x:Name="btnLancamento" Clicked="btnLancamento_Clicked"  Text="Lançamento" AbsoluteLayout.LayoutBounds="230,50"/>
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

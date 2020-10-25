@@ -31,5 +31,10 @@ namespace PrimeiraVersao.Views
         {
             Application.Current.MainPage = new Acompanhamento_Meses_Anteriores();
         }
+
+        private void btnMenu_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new Menu();
+        }
     }
 }

@@ -3,17 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrimeiraVersao.Views.Acompanhamento_Meses_Anteriores">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="0,50,0,50" BackgroundColor="Black">
+            <Image Source="xamarin_logo.png" ></Image>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="70"/>
                 </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>                    
-                    <ColumnDefinition Width="250" />
-                    <ColumnDefinition Width="200"/>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="180"/>
+                    <ColumnDefinition Width="70"/>
                 </Grid.ColumnDefinitions>
-                <Label Grid.Row="0" Grid.Column="0" Text="Acompanhamento" FontSize="30" AbsoluteLayout.LayoutBounds="0,0"></Label>
-                <Button Grid.Row="0" Grid.Column="1" x:Name="btnLogout" Clicked="btnLogout_Clicked" HorizontalOptions="Center"  Text="Logout" BackgroundColor="Gray" FontSize="12"/>
+                <Button Grid.Row="0" Grid.Column="0" x:Name="btnMenu" Clicked="btnMenu_Clicked" HorizontalOptions="Center"  Text="Menu" BackgroundColor="Gray" FontSize="12"/>
+                <Label TextColor="Orange" Grid.Row="0" Grid.Column="1" Text="Acompanhamento" FontSize="20" VerticalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0,0"></Label>
+                <Button Grid.Row="0" Grid.Column="2" x:Name="btnLogout" Clicked="btnLogout_Clicked" HorizontalOptions="Center"  Text="Logout" BackgroundColor="Gray" FontSize="12"/>
             </Grid>
             <Grid>
                 <Grid.RowDefinitions>
@@ -24,15 +27,38 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Row="0" Grid.Column="0" x:Name="btnMesAtual" Text="Mês Atual"  AbsoluteLayout.LayoutBounds="0,50" />
+                <Button Grid.Row="0" Grid.Column="0" x:Name="btnMesAtual" Clicked="btnMesAtual_Clicked"  Text="Mês Atual"  AbsoluteLayout.LayoutBounds="0,50" />
                 <Button Grid.Row="0" Grid.Column="1" x:Name="btnLinhaTempo" Clicked="btnLinhaTempo_Clicked" Text="Linha do Tempo" AbsoluteLayout.LayoutBounds="90,50"/>
-                <Button Grid.Row="0" Grid.Column="2" x:Name="btnMesesAnteriores" Clicked="btnMesesAnteriores_Clicked" BackgroundColor="orange"  Text="Meses Anteriores" AbsoluteLayout.LayoutBounds="230,50"/>
+                <Button Grid.Row="0" Grid.Column="2" x:Name="btnMesesAnteriores"  BackgroundColor="orange"  Text="Meses Anteriores" AbsoluteLayout.LayoutBounds="230,50"/>
             </Grid>
-           
-            <Label Text="Mês:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
-            <DatePicker MinimumDate="01/01/2020"
-            MaximumDate="09/30/2020"
-            Date="09/04/2020" />
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="180"/>                    
+                </Grid.ColumnDefinitions>
+                <Label TextColor="Orange" Text="Mês:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>                
+                <Label Grid.Row="0" Grid.Column="1" TextColor="Orange" Text="Ano:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>                
+            </Grid>
+            
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="180"/>
+                    <ColumnDefinition Width="70"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" TextColor="Orange" Text="Mês:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
+                <Entry Keyboard="Numeric"  Grid.Row="0" Grid.Column="0" BackgroundColor="White"></Entry>
+                <Label Grid.Row="0" Grid.Column="1" TextColor="Orange" Text="Mês:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
+                <Entry Keyboard="Numeric" Grid.Row="0" Grid.Column="1" BackgroundColor="White"></Entry>
+            </Grid>
+            
 
 
 
