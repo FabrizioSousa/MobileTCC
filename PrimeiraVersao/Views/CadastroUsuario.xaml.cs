@@ -54,11 +54,9 @@ namespace PrimeiraVersao.Views
                     Usuario usuario = new Usuario();
                     usuario.Email = TxtEmail.Text.ToString();
                     usuario.DataNascimento = TxtDataNascimento.Date.ToString("dd/MM/yyyy");
-                    usuario.Gênero = cbGenero.SelectedItem.ToString();
-                    usuario.NomeSujoPassado = cbNomeSujoPassado.SelectedItem.ToString();
-                    usuario.NomeSujo = cbNomeSujo.SelectedItem.ToString();
+                    usuario.Gênero = cbGenero.SelectedItem.ToString();                  
                     usuario.Senha = TxtSenha.Text.ToString();
-                    usuario.Escolaridade = cbEscolaridade.SelectedItem.ToString();
+                  
 
                     
                     db.Insert(usuario);

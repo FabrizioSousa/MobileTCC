@@ -42,37 +42,9 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
-            "Azure.Storage.Blobs": {
+            "Microcharts.Forms": {
               "target": "Package",
-              "version": "[12.6.0, )"
-            },
-            "Azure.Storage.Queues": {
-              "target": "Package",
-              "version": "[12.4.2, )"
-            },
-            "Microsoft.AspNet.WebApi.Client": {
-              "target": "Package",
-              "version": "[5.2.7, )"
-            },
-            "Microsoft.Azure.Cosmos.Table": {
-              "target": "Package",
-              "version": "[1.0.8, )"
-            },
-            "Microsoft.Azure.Storage.Blob": {
-              "target": "Package",
-              "version": "[11.2.2, )"
-            },
-            "Microsoft.Extensions.Configuration.Abstractions": {
-              "target": "Package",
-              "version": "[3.1.8, )"
-            },
-            "Microsoft.ML": {
-              "target": "Package",
-              "version": "[1.5.2, )"
-            },
-            "Microsoft.ML.CpuMath": {
-              "target": "Package",
-              "version": "[1.5.2, )"
+              "version": "[0.9.5.9, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -80,9 +52,17 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
             "RestSharp": {
               "target": "Package",
               "version": "[106.11.7, )"
+            },
+            "Syncfusion.Xamarin.SfChart": {
+              "target": "Package",
+              "version": "[18.3.0.44, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

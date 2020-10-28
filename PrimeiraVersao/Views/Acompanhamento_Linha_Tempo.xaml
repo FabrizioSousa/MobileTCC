@@ -1,9 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PrimeiraVersao.Views.Acompanhamento_Linha_Tempo">
-    <ContentPage.Content>
-        <StackLayout Padding="0,50,0,50" BackgroundColor="Black">
+             x:Class="PrimeiraVersao.Views.Acompanhamento_Linha_Tempo"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms" 
+              xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             xmlns:local="clr-namespace:PrimeiraVersao.Views">
+
+    <ContentPage.BindingContext>
+        <local:Acompanhamento_Linha_Tempo></local:Acompanhamento_Linha_Tempo>
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <StackLayout Padding="0,50,0,50" BackgroundColor="black">
             <Image Source="xamarin_logo.png" ></Image>
             <Grid>
                 <Grid.RowDefinitions>
@@ -31,12 +38,57 @@
                 <Button Grid.Row="0" Grid.Column="1" x:Name="btnLinhaTempo"  Text="Linha do Tempo" AbsoluteLayout.LayoutBounds="90,50"  BackgroundColor="orange"/>
                 <Button Grid.Row="0" Grid.Column="2" x:Name="btnMesesAnteriores" Clicked="btnMesesAnteriores_Clicked" Text="Meses Anteriores" AbsoluteLayout.LayoutBounds="230,50"/>
             </Grid>
-            
-           
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>               
+            </Grid.ColumnDefinitions>
+            <chart:SfChart Grid.Row="0" Grid.Column="0" BackgroundColor="Transparent" x:Name="GraficoDespRenda">
+
+                    <chart:SfChart.Title>
+                        <chart:ChartTitle BackgroundColor="Transparent" TextColor="White" BorderColor="Transparent" Text="Despesas x Renda"/>
+                    </chart:SfChart.Title>
+                    <chart:SfChart.Legend>
+                        <chart:ChartLegend  BackgroundColor="white"></chart:ChartLegend>
+                    </chart:SfChart.Legend>
+                    
+                <chart:SfChart.PrimaryAxis>
+                        <chart:CategoryAxis>
+                            <chart:CategoryAxis.Title>
+                                <chart:ChartAxisTitle Text="Data" TextColor="white"></chart:ChartAxisTitle>
+                            </chart:CategoryAxis.Title>
+                            <chart:CategoryAxis.LabelStyle>
+                                <chart:ChartAxisLabelStyle  TextColor="white"></chart:ChartAxisLabelStyle>
+                            </chart:CategoryAxis.LabelStyle>
+                        </chart:CategoryAxis>
+                        
+                </chart:SfChart.PrimaryAxis>
+
+                <chart:SfChart.SecondaryAxis>
+                            <chart:NumericalAxis>
+                            <chart:NumericalAxis.Title>
+                                <chart:ChartAxisTitle Text="Despesas" TextColor="white"></chart:ChartAxisTitle>
+                            </chart:NumericalAxis.Title>
+                            <chart:NumericalAxis.LabelStyle>
+                                    <chart:ChartAxisLabelStyle LabelFormat="R$ ##" TextColor="white"></chart:ChartAxisLabelStyle>
+                                </chart:NumericalAxis.LabelStyle>
+                            </chart:NumericalAxis>
+
+                        </chart:SfChart.SecondaryAxis>
 
 
+                    <chart:ColumnSeries ItemsSource="{Binding graficos}"  x:Name="ColunaDespesas" XBindingPath="Data" Label="Despesas"  Color="Red" YBindingPath="Despesas" />
 
+                    <chart:ColumnSeries ItemsSource="{Binding graficos}" x:Name="ColunaRenda" XBindingPath="Data" Label="Renda"  Color="Green" YBindingPath="Renda" />
+                </chart:SfChart>
 
-        </StackLayout>
-    </ContentPage.Content>
+                <!--<forms:ChartView x:Name="Grafico" HeightRequest="150" />-->
+
+            </Grid>
+
+    </StackLayout>
+    </ScrollView>
 </ContentPage>

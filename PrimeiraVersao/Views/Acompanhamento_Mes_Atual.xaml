@@ -3,44 +3,81 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PrimeiraVersao.Views.Acompanhamento_Mes_Atual">
     <ContentPage.Content>
-        <StackLayout Padding="0,50,0,50" BackgroundColor="Black">
-            <Image Source="xamarin_logo.png" ></Image>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="70"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="90"/>
-                    <ColumnDefinition Width="180"/>
-                    <ColumnDefinition Width="70"/>
-                </Grid.ColumnDefinitions>
-                <Button Grid.Row="0" Grid.Column="0" x:Name="btnMenu" Clicked="btnMenu_Clicked" HorizontalOptions="Center"  Text="Menu" BackgroundColor="Gray" FontSize="12"/>
-                <Label TextColor="Orange" Grid.Row="0" Grid.Column="1" Text="Acompanhamento" FontSize="20" VerticalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0,0"></Label>
-                <Button Grid.Row="0" Grid.Column="2" x:Name="btnLogout" Clicked="btnLogout_Clicked" HorizontalOptions="Center"  Text="Logout" BackgroundColor="Gray" FontSize="12"/>
-            </Grid>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="70"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Button Grid.Row="0" Grid.Column="0" x:Name="btnMesAtual" Clicked="btnMesAtual_Clicked" Text="Mês Atual"  BackgroundColor="orange" AbsoluteLayout.LayoutBounds="0,50" />
-                <Button Grid.Row="0" Grid.Column="1" x:Name="btnLinhaTempo" Clicked="btnLinhaTempo_Clicked" Text="Linha do Tempo" AbsoluteLayout.LayoutBounds="90,50"  />
-                <Button Grid.Row="0" Grid.Column="2" x:Name="btnMesesAnteriores" Clicked="btnMesesAnteriores_Clicked" Text="Meses Anteriores" AbsoluteLayout.LayoutBounds="230,50"/>
-            </Grid>
+        <ScrollView>
+            <StackLayout Padding="0,50,0,50" BackgroundColor="Black">
+
+                <Image Source="xamarin_logo.png" ></Image>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="90"/>
+                        <ColumnDefinition Width="180"/>
+                        <ColumnDefinition Width="70"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0" Grid.Column="0" x:Name="btnMenu" Clicked="btnMenu_Clicked" HorizontalOptions="Center"  Text="Menu" BackgroundColor="Gray" FontSize="12"/>
+                    <Label TextColor="Orange" Grid.Row="0" Grid.Column="1" Text="Acompanhamento" FontSize="20" VerticalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0,0"></Label>
+                    <Button Grid.Row="0" Grid.Column="2" x:Name="btnLogout" Clicked="btnLogout_Clicked" HorizontalOptions="Center"  Text="Logout" BackgroundColor="Gray" FontSize="12"/>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0" Grid.Column="0" x:Name="btnMesAtual" Clicked="btnMesAtual_Clicked" Text="Mês Atual"  BackgroundColor="orange" AbsoluteLayout.LayoutBounds="0,50" />
+                    <Button Grid.Row="0" Grid.Column="1" x:Name="btnLinhaTempo" Clicked="btnLinhaTempo_Clicked" Text="Linha do Tempo" AbsoluteLayout.LayoutBounds="90,50"  />
+                    <Button Grid.Row="0" Grid.Column="2" x:Name="btnMesesAnteriores" Clicked="btnMesesAnteriores_Clicked" Text="Meses Anteriores" AbsoluteLayout.LayoutBounds="230,50"/>
+                </Grid>    
+                
+                
+                
+                
+                <Label TextColor="Orange" Text="Escolaridade"  FontAttributes="Bold"/>
+                <Picker BackgroundColor="White" x:Name="cbEscolaridade">
+                    <Picker.Items>
+                        <x:String>Ensino Fundamental Incompleto</x:String>
+                        <x:String>Ensino Fundamental Completo</x:String>
+                        <x:String>Ensino Medio Incompleto</x:String>
+                        <x:String>Ensino Medio Completo</x:String>
+                        <x:String>Ensino Superior incompleto</x:String>
+                        <x:String>Ensino Superior Completo</x:String>
+                        <x:String>Pos graduacao / Mestrado, etc.</x:String>
+                        
+                    </Picker.Items>
+                </Picker>                
+                <Label TextColor="Orange" Text="Já esteve com nome sujo?" FontAttributes="Bold"/>
+                <Picker BackgroundColor="White" x:Name="cbNomeSujoPassado">
+                    <Picker.Items>
+                        <x:String>Sim</x:String>
+                        <x:String>Não</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label TextColor="Orange" Text="Tem contas atrasadas?"   FontAttributes="Bold"/>
+                <Picker BackgroundColor="White" x:Name="cbContasAtrasadas">
+                    <Picker.Items>
+                        <x:String>Sim</x:String>
+                        <x:String>Não</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label TextColor="Orange" Text="Se sim, quanto tempo?"   FontAttributes="Bold"/>
+                <Entry Keyboard="Numeric" BackgroundColor="White" x:Name="txtTempoAtrasado" ></Entry>
+                <Label TextColor="Orange" Text="Renda mensal"   FontAttributes="Bold"/>
+                <Entry Keyboard="Numeric" BackgroundColor="White" x:Name="txtRenda" ></Entry>
+                <Label TextColor="Orange" Text="Despesas fixas mensal"   FontAttributes="Bold"/>
+                <Entry Keyboard="Numeric" BackgroundColor="White" x:Name="txtDespFixas" ></Entry>
+                <Label TextColor="Orange" Text="Despesas variáveis mensal"   FontAttributes="Bold"/>
+                <Entry Keyboard="Numeric" BackgroundColor="White" x:Name="txtDespVariaveis" ></Entry>
+                <Button BackgroundColor="Orange" x:Name="btnPredicao"  Clicked="btnPredicao_Clicked"   Text="Prever inadimplencia"></Button>
             
-           
-            
-            <Label x:Name="txtPredicao" TextColor="White"  FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
-            <Label x:Name="txtProbabilidade" TextColor="White"  FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
-            
 
 
 
-
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

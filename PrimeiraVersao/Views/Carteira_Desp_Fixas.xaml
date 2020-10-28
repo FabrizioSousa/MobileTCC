@@ -4,51 +4,52 @@
              x:Class="PrimeiraVersao.Views.Carteira_Desp_Fixas">
     <ContentPage.Content>
         <ScrollView>
-        <StackLayout Padding="0,50,0,50" BackgroundColor="Black">
-            <Image Source="xamarin_logo.png" ></Image>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="70"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
+            <StackLayout Padding="0,50,0,50" BackgroundColor="Black">
+                <Image Source="xamarin_logo.png" ></Image>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="80"/>
                         <ColumnDefinition Width="180"/>
                         <ColumnDefinition Width="80"/>
                     </Grid.ColumnDefinitions>
                     <Button Grid.Row="0" Grid.Column="0" x:Name="btnMenu" Clicked="btnMenu_Clicked"  HorizontalOptions="Center"  Text="Menu" BackgroundColor="Gray" FontSize="12"/>
                     <Label TextColor="Orange" Grid.Row="0" Grid.Column="1" Text="Carteira" FontSize="50" AbsoluteLayout.LayoutBounds="0,0"></Label>
-                <Button Grid.Row="0" Grid.Column="2" x:Name="btnLogout" Clicked="btnLogout_Clicked" HorizontalOptions="Center"  Text="Logout" BackgroundColor="Gray" FontSize="12"/>
-            </Grid>
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="70"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Button Grid.Row="0" Grid.Column="0" x:Name="btnRenda" Clicked="btnRenda_Clicked" Text="Renda"  AbsoluteLayout.LayoutBounds="0,50"  />
-                <Button Grid.Row="0" Grid.Column="1" x:Name="btnDespFixas" BackgroundColor="orange" Text="Despesas Fixas" AbsoluteLayout.LayoutBounds="90,50"/>
-                <Button Grid.Row="0" Grid.Column="2" x:Name="btnDespExtras" Clicked="btnDespExtras_Clicked" Text="Despesas Extras" AbsoluteLayout.LayoutBounds="230,50"/>
-            </Grid>
-            <Label TextColor="Orange" Text="Categoria:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
-                <Picker BackgroundColor="White">
-                <Picker.Items>
-                    <x:String>Conta de luz</x:String>
-                    <x:String>Conta de telefone</x:String>
-                    <x:String>Conta da Internet</x:String>
-                    <x:String>Conta da TV a cabo</x:String>
-                </Picker.Items>
-            </Picker>
-            <Label TextColor="Orange" Text="Descrição:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
-                <Entry BackgroundColor="White" ></Entry>
-            <Label TextColor="Orange" Text="Valor:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
-                <Entry BackgroundColor="White" Placeholder="R$"></Entry>
-            <Button Text="+" ></Button>
+                    <Button Grid.Row="0" Grid.Column="2" x:Name="btnLogout" Clicked="btnLogout_Clicked" HorizontalOptions="Center"  Text="Logout" BackgroundColor="Gray" FontSize="12"/>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Row="0" Grid.Column="0" x:Name="btnRenda" Clicked="btnRenda_Clicked" Text="Renda"  AbsoluteLayout.LayoutBounds="0,50"  />
+                    <Button Grid.Row="0" Grid.Column="1" x:Name="btnDespFixas" BackgroundColor="orange" Text="Despesas Fixas" AbsoluteLayout.LayoutBounds="90,50"/>
+                    <Button Grid.Row="0" Grid.Column="2" x:Name="btnDespExtras" Clicked="btnDespExtras_Clicked" Text="Despesas Extras" AbsoluteLayout.LayoutBounds="230,50"/>
+                </Grid>
+                <Label TextColor="Orange" Text="Categoria:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
+                <Picker BackgroundColor="White" x:Name="cbCategoria">
+                    <Picker.Items>
+                        <x:String>Conta de luz</x:String>
+                        <x:String>Conta de telefone</x:String>
+                        <x:String>Conta da Internet</x:String>
+                        <x:String>Conta da TV a cabo</x:String>
+                        <x:String>Outros</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label TextColor="Orange" Text="Descrição:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
+                <Entry BackgroundColor="White" x:Name="txtDescricao" ></Entry>
+                <Label TextColor="Orange" Text="Valor:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
+                <Entry BackgroundColor="White" x:Name="txtValor" Placeholder="R$"></Entry>
+                <Button Text="+" x:Name="btnAdicionarDespesa" Clicked="btnAdicionarDespesa_Clicked"></Button>
 
 
-        </StackLayout>
-            </ScrollView>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

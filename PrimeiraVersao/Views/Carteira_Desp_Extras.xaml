@@ -36,19 +36,20 @@
                 </Grid>
 
                 <Label TextColor="Orange" Text="Categoria:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
-                <Picker BackgroundColor="White">
+                <Picker BackgroundColor="White" x:Name="cbCategoria">
                     <Picker.Items>
                         <x:String>Lazer</x:String>
                         <x:String>Educação</x:String>
                         <x:String>Comida</x:String>
                         <x:String>Roupa</x:String>
+                        <x:String>Outros</x:String>
                     </Picker.Items>
                 </Picker>
                 <Label TextColor="Orange" Text="Descrição:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
-                <Entry BackgroundColor="White"></Entry>
-                <Label TextColor="Orange" Text="Valor:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
-                <Entry BackgroundColor="White" Placeholder="R$"></Entry>
-                <Button Text="+"></Button>
+                <Entry BackgroundColor="White" x:Name="txtDescricao"></Entry>
+                <Label TextColor="Orange" Text="Valor:"   FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
+                <Entry BackgroundColor="White" Placeholder="R$" x:Name="txtValor"></Entry>
+                <Button Text="+" x:Name="btnAdicionarDespesa" Clicked="btnAdicionarDespesa_Clicked" ></Button>
 
 
 

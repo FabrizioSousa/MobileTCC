@@ -1,9 +1,7 @@
 ﻿using PrimeiraVersao.Models;
 using System;
-using Microsoft.ML;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Newtonsoft.Json.Linq;
 using RestSharp;
 using Xamarin.Essentials;
 using System.Threading;
@@ -124,7 +122,7 @@ namespace PrimeiraVersao.Views
                 {
                     await DisplayAlert("Sucesso", "Login com sucesso", "OK");
 
-                    Application.Current.MainPage = new Menu();
+                    Application.Current.MainPage = new Menu(email);
                 }
                 else
                     await DisplayAlert("Erro", "E-mail não existe", "OK");

@@ -20,38 +20,11 @@
             </Entry>
                 <Label TextColor="Orange" Text="Gênero" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
                 <Picker BackgroundColor="White" x:Name="cbGenero">
-                <Picker.Items>
-                    <x:String>Masculino</x:String>
-                    <x:String>Feminino</x:String>
-                </Picker.Items>
-            </Picker>
-                <Label TextColor="Orange" Text="Escolaridade" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
-                <Picker BackgroundColor="White" x:Name="cbEscolaridade">
-                <Picker.Items>
-                    <x:String>Ensino Fundamental Incompleto</x:String>
-                    <x:String>Ensino Fundamental Completo</x:String>
-                    <x:String>Ensino Médio Incompleto</x:String>
-                    <x:String>Ensino Médio Completo</x:String>
-                    <x:String>Ensino Superior Incompleto</x:String>
-                    <x:String>Ensino Superior Completo</x:String>
-                    <x:String>Mestrado/Doutorado Incompleto</x:String>
-                    <x:String>Mestrado/Doutorado Completo</x:String>
-                </Picker.Items>
-            </Picker>
-                <Label TextColor="Orange" Text="Está com nome sujo?" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
-                <Picker BackgroundColor="White" x:Name="cbNomeSujo">
-                <Picker.Items>
-                    <x:String>Sim</x:String>
-                    <x:String>Não</x:String>                    
-                </Picker.Items>
-            </Picker>
-                <Label TextColor="Orange" Text="Já esteve com nome sujo?" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
-                <Picker BackgroundColor="White" x:Name="cbNomeSujoPassado">
-                <Picker.Items>
-                    <x:String>Sim</x:String>
-                    <x:String>Não</x:String>
-                </Picker.Items>
-            </Picker>
+                    <Picker.Items>
+                        <x:String>Masculino</x:String>
+                        <x:String>Feminino</x:String>
+                    </Picker.Items>
+                </Picker>
                 <Label TextColor="Orange" Text="Data de nascimento" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
                 <DatePicker BackgroundColor="White" x:Name="TxtDataNascimento" Format="dd/MM/yyyy" />
                 <Label TextColor="Orange" Text="Senha" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>

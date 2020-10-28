@@ -9,14 +9,13 @@ namespace PrimeiraVersao.Models
         [SQLite.PrimaryKey, SQLite.AutoIncrement]
         public int ID { get; set; }
 
+        public string Email { get; set; }
         
-        public string Gênero { get; set; }
-        public string Escolaridade { get; set; }
-        public string NomeSujo { get; set; }
-        public string NomeSujoPassado { get; set; }
-        public string DataNascimento { get; set; }
-        public string Senha { get; set; }
+        public string Categoria { get; set; }
+        public string Descrição { get; set; }
+        public float Valor { get; set; }
+        public DateTime DataLancamento { get; set; }
 
-       
+
     }
 }

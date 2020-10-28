@@ -16,6 +16,12 @@ namespace PrimeiraVersao.Views
         {
             InitializeComponent();
         }
+        public string email;
+        public Acompanhamento_Meses_Anteriores(string email)
+        {
+            this.email = email;
+            InitializeComponent();
+        }
 
         private void btnLogout_Clicked(object sender, EventArgs e)
         {
