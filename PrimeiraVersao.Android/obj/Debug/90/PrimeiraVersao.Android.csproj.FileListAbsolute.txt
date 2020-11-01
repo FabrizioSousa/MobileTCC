@@ -556,3 +556,17 @@ C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\a
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\android\src\crc64bb223c2be3a01e03\SKGLViewRenderer.java
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\android\src\crc64bb223c2be3a01e03\SKGLViewRendererBase_2.java
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\android\src\crc64e9f97cf19b8286a9\ChartView.java
+C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\android\assets\Microsoft.Data.Sqlite.dll
+C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\android\assets\Microsoft.CSharp.dll
+C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\android\assets\Microsoft.CSharp.pdb
+C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\android\assets\Microsoft.Data.SqlClient.dll
+C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\android\assets\Microsoft.Data.SqlClient.pdb
+C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\android\assets\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\android\assets\Microsoft.IdentityModel.Logging.dll
+C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\android\assets\Microsoft.IdentityModel.Protocols.dll
+C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\android\assets\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\android\assets\Microsoft.IdentityModel.Tokens.dll
+C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\android\assets\System.IdentityModel.dll
+C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\android\assets\System.IdentityModel.pdb
+C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\android\assets\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao.Android\obj\Debug\90\android\assets\System.Security.Cryptography.Cng.dll

@@ -33,12 +33,12 @@ namespace PrimeiraVersao.Views
 
         private void btnMesAtual_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new Acompanhamento_Mes_Atual();
+            Application.Current.MainPage = new Acompanhamento_Mes_Atual(email);
         }
 
         private void btnMesesAnteriores_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new Acompanhamento_Meses_Anteriores();
+            Application.Current.MainPage = new Acompanhamento_Meses_Anteriores(email);
         }
 
         private void btnLogout_Clicked(object sender, EventArgs e)
@@ -48,12 +48,12 @@ namespace PrimeiraVersao.Views
 
         private void btnMenu_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new Menu();
+            Application.Current.MainPage = new Menu(email);
         }
 
         private void btnLinhaTempo_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new Acompanhamento_Linha_Tempo();
+            Application.Current.MainPage = new Acompanhamento_Linha_Tempo(email);
         }
 
         private async void btnPredicao_Clicked(object sender, EventArgs e)

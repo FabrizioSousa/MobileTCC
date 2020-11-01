@@ -88,6 +88,9 @@
                 <!--<forms:ChartView x:Name="Grafico" HeightRequest="150" />-->
 
             </Grid>
+            <ListView x:Name="ListRenda" ItemsSource="{Binding graficos}">
+                
+            </ListView>
 
     </StackLayout>
     </ScrollView>

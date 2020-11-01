@@ -16,9 +16,9 @@
                 <Label Text="Cadastro" TextColor="Orange" FontSize="50"  FontAttributes="Bold" HorizontalTextAlignment="Center"></Label>
 
                 <Label TextColor="Orange" Text="E-mail" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
-                <Entry BackgroundColor="White" x:Name="TxtEmail">
+                <Entry BackgroundColor="White" x:Name="TxtEmail" Keyboard="Email">
             </Entry>
-                <Label TextColor="Orange" Text="Gênero" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
+                <Label TextColor="Orange" Text="Gênero que se identifica" Style="{StaticResource TextoInput}" FontAttributes="Bold"/>
                 <Picker BackgroundColor="White" x:Name="cbGenero">
                     <Picker.Items>
                         <x:String>Masculino</x:String>

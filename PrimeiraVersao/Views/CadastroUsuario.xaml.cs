@@ -1,4 +1,5 @@
-﻿using Java.Lang;
+﻿
+using Microsoft.Data.SqlClient;
 using PrimeiraVersao.Models;
 using SQLite;
 using System;
@@ -54,11 +55,12 @@ namespace PrimeiraVersao.Views
                     Usuario usuario = new Usuario();
                     usuario.Email = TxtEmail.Text.ToString();
                     usuario.DataNascimento = TxtDataNascimento.Date.ToString("dd/MM/yyyy");
-                    usuario.Gênero = cbGenero.SelectedItem.ToString();                  
+                    usuario.Gênero = cbGenero.SelectedItem.ToString();
                     usuario.Senha = TxtSenha.Text.ToString();
-                  
 
-                    
+
+
+
                     db.Insert(usuario);
                     await DisplayAlert("Confirmação", "E-mail: " + usuario.Email + "\nSenha: " + usuario.Senha, "OK");
                     Application.Current.MainPage = new Login();
@@ -66,9 +68,9 @@ namespace PrimeiraVersao.Views
                 else
                     await DisplayAlert("Erro", "Dados vazios ou e-mail sem @", "OK");
             }
-            catch(System.Exception ex)
+            catch (System.Exception ex)
             {
-                await DisplayAlert("Erro", "Dados vazios ou e-mail sem @", "OK");
+                await DisplayAlert("Erro", ex.Message, "OK");
             }
         }
 

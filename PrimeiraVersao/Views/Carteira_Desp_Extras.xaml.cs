@@ -57,33 +57,33 @@ namespace PrimeiraVersao.Views
             try
             {
                 var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-                path = Path.Combine(path, "DespesasVariaveis");
+                path = Path.Combine(path, "Despesas");
                 var db = new SQLiteConnection(path);
-                db.CreateTable<DespesasVariaveis>();
+                db.CreateTable<Despesas>();
 
                 //List<Usuario> EmailUsuario = db.Table<Usuario>().Where(x => x.Email == email).ToList();
 
-                if (cbCategoria.SelectedItem.ToString() != null
-                    && txtDescricao.Text != null
+                if (cbCategoria.SelectedItem.ToString() != null                    
                     && txtValor.Text != null
                     )
                 {
                     //var libFolder = FileSystem.AppDataDirectory;
 
 
-                    DespesasVariaveis despesasVariaveis = new DespesasVariaveis();
+                    Despesas despesasVariaveis = new Despesas();
                     despesasVariaveis.Email = email;
                     despesasVariaveis.DataLancamento = DateTime.Now;
                     despesasVariaveis.Categoria = cbCategoria.SelectedItem.ToString();
                     despesasVariaveis.Descrição = txtDescricao.Text == null ? "" : txtDescricao.Text.ToString();
-                    despesasVariaveis.Valor = float.Parse(txtValor.Text);
+                    despesasVariaveis.ValorDespesa = float.Parse(txtValor.Text);
+                    despesasVariaveis.TipoDespesa = "Variavel";
 
 
                     db.Insert(despesasVariaveis);
                     await DisplayAlert("Confirmação", "E-mail: " + despesasVariaveis.Email +
                         "\nCategoria: " + despesasVariaveis.Categoria +
                         "\nDescrição: " + despesasVariaveis.Descrição +
-                        "\nValor: " + despesasVariaveis.Valor +
+                        "\nValor: " + despesasVariaveis.ValorDespesa +
                         "\nData: " + despesasVariaveis.DataLancamento
                         , "OK");
                     LimparTexto();

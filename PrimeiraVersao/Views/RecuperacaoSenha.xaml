@@ -8,7 +8,7 @@
             <Label TextColor="Orange" Text="Recuperação da Senha" FontSize="50"  FontAttributes="Bold" HorizontalTextAlignment="Center">
             </Label>
             <Label TextColor="Orange" Text="E-mail" FontSize="30" FontAttributes="Bold"/>
-            <Entry  BackgroundColor="White" x:Name="TxtEmail">
+            <Entry  BackgroundColor="White" x:Name="TxtEmail" Keyboard="Email">
             </Entry>
             <Label  TextColor="Orange" Text="Nova Senha" FontSize="30" FontAttributes="Bold"/>
             <Entry  BackgroundColor="White" x:Name="TxtNovaSenha" IsPassword="true">

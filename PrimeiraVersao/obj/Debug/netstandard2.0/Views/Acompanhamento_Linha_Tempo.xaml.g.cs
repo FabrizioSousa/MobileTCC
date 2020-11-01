@@ -41,6 +41,9 @@ namespace PrimeiraVersao.Views {
         private global::Syncfusion.SfChart.XForms.ColumnSeries ColunaRenda;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.ListView ListRenda;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Acompanhamento_Linha_Tempo));
             btnMenu = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnMenu");
@@ -51,6 +54,7 @@ namespace PrimeiraVersao.Views {
             GraficoDespRenda = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.SfChart.XForms.SfChart>(this, "GraficoDespRenda");
             ColunaDespesas = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.SfChart.XForms.ColumnSeries>(this, "ColunaDespesas");
             ColunaRenda = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Syncfusion.SfChart.XForms.ColumnSeries>(this, "ColunaRenda");
+            ListRenda = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "ListRenda");
         }
     }
 }

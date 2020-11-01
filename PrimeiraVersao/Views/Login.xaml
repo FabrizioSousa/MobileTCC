@@ -11,8 +11,8 @@
             <Image Source="xamarin_logo.png" ></Image>
             <Label TextColor="Orange" Text=".crescedin"  FontSize="50" FontAttributes="Bold" HorizontalTextAlignment="Center">
             </Label>            
-            <Label TextColor="Orange" Text="E-mail" FontSize="30" FontAttributes="Bold"/>
-            <Entry BackgroundColor="White" x:Name="TxtEmail">
+            <Label TextColor="Orange" Text="E-mail"  FontSize="30" FontAttributes="Bold"/>
+            <Entry BackgroundColor="White" Keyboard="Email" x:Name="TxtEmail">
             </Entry>
             <Label TextColor="Orange" Text="Senha" FontSize="30" FontAttributes="Bold"/>
             <Entry BackgroundColor="White" x:Name="TxtSenha" IsPassword="true">

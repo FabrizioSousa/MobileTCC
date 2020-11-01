@@ -73,16 +73,17 @@ namespace PrimeiraVersao.Views
                     Renda renda = new Renda();
                     renda.Email = email;
                     renda.DataLancamento = DateTime.Now;
+                    renda.AnoMesDataLancamento = DateTime.Now.ToString("yyyy-MM");
                     renda.Categoria = cbCategoria.SelectedItem.ToString();
                     renda.Descrição = txtDescricao.Text == null ? "" : txtDescricao.Text.ToString();
-                    renda.Valor = float.Parse(txtValor.Text);
+                    renda.ValorRenda = float.Parse(txtValor.Text);
 
 
                     db.Insert(renda);
                     await DisplayAlert("Confirmação", "E-mail: " + renda.Email + 
                         "\nCategoria: " + renda.Categoria +
                         "\nDescrição: " + renda.Descrição +
-                        "\nValor: " + renda.Valor +
+                        "\nValor: " + renda.ValorRenda +
                         "\nData: " + renda.DataLancamento
                         , "OK");
                     LimparTexto();

@@ -55,9 +55,9 @@ namespace PrimeiraVersao.Views
             try
             {
                 var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-                path = Path.Combine(path, "DespesasFixas");
+                path = Path.Combine(path, "Despesas");
                 var db = new SQLiteConnection(path);
-                db.CreateTable<DespesasFixas>();
+                db.CreateTable<Despesas>();
 
                 //List<Usuario> EmailUsuario = db.Table<Usuario>().Where(x => x.Email == email).ToList();
 
@@ -68,19 +68,20 @@ namespace PrimeiraVersao.Views
                     //var libFolder = FileSystem.AppDataDirectory;
 
 
-                    DespesasFixas despesasFixas = new DespesasFixas();
+                    Despesas despesasFixas = new Despesas();
                     despesasFixas.Email = email;
                     despesasFixas.DataLancamento = DateTime.Now;
                     despesasFixas.Categoria = cbCategoria.SelectedItem.ToString();
                     despesasFixas.Descrição = txtDescricao.Text == null ? "" : txtDescricao.Text.ToString();
-                    despesasFixas.Valor = float.Parse(txtValor.Text);
-
+                    despesasFixas.ValorDespesa = float.Parse(txtValor.Text);
+                    despesasFixas.TipoDespesa = "Fixo";
+                    despesasFixas.AnoMesDataLancamento = DateTime.Now.ToString("yyyy-MM");
 
                     db.Insert(despesasFixas);
                     await DisplayAlert("Confirmação", "E-mail: " + despesasFixas.Email +
                         "\nCategoria: " + despesasFixas.Categoria +
                         "\nDescrição: " + despesasFixas.Descrição +
-                        "\nValor: " + despesasFixas.Valor +
+                        "\nValor: " + despesasFixas.ValorDespesa +
                         "\nData: " + despesasFixas.DataLancamento
                         , "OK");
                     LimparTexto();

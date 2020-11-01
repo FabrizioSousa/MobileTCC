@@ -45,7 +45,7 @@
                 <Label TextColor="Orange" Text="Descrição:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
                 <Entry BackgroundColor="White" x:Name="txtDescricao" ></Entry>
                 <Label TextColor="Orange" Text="Valor:" FontSize="20" AbsoluteLayout.LayoutBounds="0,120"></Label>
-                <Entry BackgroundColor="White" x:Name="txtValor" Placeholder="R$"></Entry>
+                <Entry BackgroundColor="White" x:Name="txtValor" Placeholder="R$" Keyboard="Numeric"></Entry>
                 <Button Text="+" x:Name="btnAdicionarDespesa" Clicked="btnAdicionarDespesa_Clicked"></Button>
 
 

@@ -13,7 +13,9 @@ namespace PrimeiraVersao.Models
         
         public string Categoria { get; set; }
         public string Descrição { get; set; }
-        public float Valor { get; set; }
+        public float ValorRenda { get; set; }
+        public string AnoMesDataLancamento { get; set; }
+
         public DateTime DataLancamento { get; set; }
 
 
