@@ -34,9 +34,9 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Row="0" Grid.Column="0" x:Name="btnMesAtual"   Clicked="btnMesAtual_Clicked" Text="Mês Atual"  AbsoluteLayout.LayoutBounds="0,50" />
+                <Button Grid.Row="0" Grid.Column="0" x:Name="btnPredicao"   Clicked="btnPredicao_Clicked" Text="Predição"  AbsoluteLayout.LayoutBounds="0,50" />
                 <Button Grid.Row="0" Grid.Column="1" x:Name="btnLinhaTempo"  Text="Linha do Tempo" AbsoluteLayout.LayoutBounds="90,50"  BackgroundColor="orange"/>
-                <Button Grid.Row="0" Grid.Column="2" x:Name="btnMesesAnteriores" Clicked="btnMesesAnteriores_Clicked" Text="Meses Anteriores" AbsoluteLayout.LayoutBounds="230,50"/>
+                <Button Grid.Row="0" Grid.Column="2" x:Name="btnMesAtual" Clicked="btnMesAtual_Clicked" Text="Mês atual" AbsoluteLayout.LayoutBounds="230,50"/>
             </Grid>
 
         <Grid>
@@ -88,9 +88,7 @@
                 <!--<forms:ChartView x:Name="Grafico" HeightRequest="150" />-->
 
             </Grid>
-            <ListView x:Name="ListRenda" ItemsSource="{Binding graficos}">
-                
-            </ListView>
+           
 
     </StackLayout>
     </ScrollView>

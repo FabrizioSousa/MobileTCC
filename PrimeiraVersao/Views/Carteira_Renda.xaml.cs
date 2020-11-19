@@ -57,9 +57,9 @@ namespace PrimeiraVersao.Views
             try
             {
                 var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-                path = Path.Combine(path, "Renda");
+                path = Path.Combine(path, "Usuario");
                 var db = new SQLiteConnection(path);
-                db.CreateTable<Renda>();
+                db.CreateTable<Lancamentos>();
               
                 //List<Usuario> EmailUsuario = db.Table<Usuario>().Where(x => x.Email == email).ToList();
 
@@ -70,20 +70,21 @@ namespace PrimeiraVersao.Views
                     //var libFolder = FileSystem.AppDataDirectory;
 
 
-                    Renda renda = new Renda();
+                    Lancamentos renda = new Lancamentos();
                     renda.Email = email;
                     renda.DataLancamento = DateTime.Now;
                     renda.AnoMesDataLancamento = DateTime.Now.ToString("yyyy-MM");
                     renda.Categoria = cbCategoria.SelectedItem.ToString();
                     renda.Descrição = txtDescricao.Text == null ? "" : txtDescricao.Text.ToString();
-                    renda.ValorRenda = float.Parse(txtValor.Text);
+                    renda.Valor = float.Parse(txtValor.Text);
+                    renda.TipoLancamento = "Renda";
 
 
                     db.Insert(renda);
                     await DisplayAlert("Confirmação", "E-mail: " + renda.Email + 
                         "\nCategoria: " + renda.Categoria +
                         "\nDescrição: " + renda.Descrição +
-                        "\nValor: " + renda.ValorRenda +
+                        "\nValor: " + renda.Valor +
                         "\nData: " + renda.DataLancamento
                         , "OK");
                     LimparTexto();

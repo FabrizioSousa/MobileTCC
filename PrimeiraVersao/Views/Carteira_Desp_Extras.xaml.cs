@@ -57,9 +57,9 @@ namespace PrimeiraVersao.Views
             try
             {
                 var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-                path = Path.Combine(path, "Despesas");
+                path = Path.Combine(path, "Usuario");
                 var db = new SQLiteConnection(path);
-                db.CreateTable<Despesas>();
+                db.CreateTable<Lancamentos>();
 
                 //List<Usuario> EmailUsuario = db.Table<Usuario>().Where(x => x.Email == email).ToList();
 
@@ -70,20 +70,22 @@ namespace PrimeiraVersao.Views
                     //var libFolder = FileSystem.AppDataDirectory;
 
 
-                    Despesas despesasVariaveis = new Despesas();
+                    Lancamentos despesasVariaveis = new Lancamentos();
                     despesasVariaveis.Email = email;
                     despesasVariaveis.DataLancamento = DateTime.Now;
                     despesasVariaveis.Categoria = cbCategoria.SelectedItem.ToString();
                     despesasVariaveis.Descrição = txtDescricao.Text == null ? "" : txtDescricao.Text.ToString();
-                    despesasVariaveis.ValorDespesa = float.Parse(txtValor.Text);
-                    despesasVariaveis.TipoDespesa = "Variavel";
+                    despesasVariaveis.Valor = float.Parse(txtValor.Text);
+                    despesasVariaveis.TipoLancamento = "Despesa Variavel";
+                    despesasVariaveis.AnoMesDataLancamento = DateTime.Now.ToString("yyyy-MM");
+
 
 
                     db.Insert(despesasVariaveis);
                     await DisplayAlert("Confirmação", "E-mail: " + despesasVariaveis.Email +
                         "\nCategoria: " + despesasVariaveis.Categoria +
                         "\nDescrição: " + despesasVariaveis.Descrição +
-                        "\nValor: " + despesasVariaveis.ValorDespesa +
+                        "\nValor: " + despesasVariaveis.Valor +
                         "\nData: " + despesasVariaveis.DataLancamento
                         , "OK");
                     LimparTexto();

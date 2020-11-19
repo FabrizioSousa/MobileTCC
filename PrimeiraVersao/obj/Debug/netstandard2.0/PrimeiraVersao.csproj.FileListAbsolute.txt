@@ -12,7 +12,6 @@ C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\Views\Login.xaml.g.cs
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\Views\RecuperacaoSenha.xaml.g.cs
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\Views\Acompanhamento_Linha_Tempo.xaml.g.cs
-C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\Views\Acompanhamento_Meses_Anteriores.xaml.g.cs
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\Views\Acompanhamento_Mes_Atual.xaml.g.cs
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\Views\Carteira_Desp_Extras.xaml.g.cs
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\Views\Carteira_Desp_Fixas.xaml.g.cs
@@ -22,7 +21,8 @@ C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\bin\Debug\netstandard2
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\bin\Debug\netstandard2.0\Mono.Android.pdb
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\bin\Debug\netstandard2.0\Mono.Android.xml
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\PrimeiraVersao.csproj.CopyComplete
-C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\PrimeiraVersao.csprojAssemblyReference.cache
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\Views\Menu.xaml.g.cs
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\PrimeiraVersao.csproj.CoreCompileInputs.cache
 C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\Views\Predicao.xaml.g.cs
+C:\Users\fabri\source\repos\PrimeiraVersao\PrimeiraVersao\obj\Debug\netstandard2.0\PrimeiraVersao.csprojAssemblyReference.cache

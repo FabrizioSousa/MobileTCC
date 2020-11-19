@@ -25,10 +25,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\Predicao.xaml.cs">
+      <DependentUpon>Predicao.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="Views\Acompanhamento_Linha_Tempo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Acompanhamento_Meses_Anteriores.xaml">
+    <EmbeddedResource Update="Views\Predicao.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Acompanhamento_Mes_Atual.xaml">
